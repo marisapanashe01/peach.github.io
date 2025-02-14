@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, Emily!</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+            /* Hide scroll bars */
+            margin: 0;
+            /* Remove default margins */
+            height: 100vh;
+            /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Center content */
+        }
+        
+        .code {
+            white-space: pre;
+            font-size: 1.5em;
+            line-height: 1.5;
+            height: 100%;
+            /* Full height */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            padding: 10px;
+        }
+        
+        .happy {
+            margin-top: 20px;
+            font-size: 2em;
+            color: #ff69b4;
+            text-align: center;
+            /* Center the text */
+        }
+        
+        .heart {
+            font-size: 3em;
+            color: #ff0000;
+            margin-top: 20px;
+            text-align: center;
+            /* Center the heart */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="code" id="codeOutput"></div>
+    <div class="happy" id="happyMessage"></div>
+    <div class="heart" id="heartMessage"></div>
+
+    <script>
+        const codeLines = [
+            "function greet() {",
+            "    console.log('Hi Emily! Why did the computer go to therapy?');",
+            "    console.log('Because it had too many bytes!');",
+            "}",
+            "",
+            "console.log('I like you more than coffee!');",
+            "",
+            "function funnyStatement() {",
+            "    return 'If you were a vegetable, you’d be a cute-cumber!';",
+            "}",
+            "",
+            "console.log(funnyStatement());",
+            "",
+            "let iceCreamFlavors = [",
+            "    'vanilla',",
+            "    'chocolate',",
+            "    'mint chocolate chip',",
+            "    'pistachio',",
+            "    'bubblegum',",
+            "];",
+            "",
+            "function iceCreamJoke() {",
+            "    return 'Emily, your taste in ice cream is like a mystery: it keeps me guessing!';",
+            "}",
+            "",
+            "console.log(iceCreamJoke());",
+            "",
+            "let memories = [",
+            "    'Our first chat!',",
+            "    'The time we laughed over nothing!',",
+            "    'Every fun moment we shared!',",
+            "    'That one time we stayed up till 3 AM!',",
+            "    'That epic debate over the best ice cream flavours!'",
+            "];",
+            "",
+            "memories.forEach(memory => {",
+            "    console.log('I cherish: ' + memory);",
+            "});",
+            "",
+            "console.log('You make every day a little brighter!');",
+            "console.log('Hope you have a fantastic day!');"
+        ];
+
+        const colors = ['#ff5733', '#33ff57', '#3357ff', '#f1c40f', '#e74c3c', '#8e44ad', '#f39c12', '#d35400'];
+        let outputElement = document.getElementById('codeOutput');
+        let happyMessageElement = document.getElementById('happyMessage');
+        let heartMessageElement = document.getElementById('heartMessage');
+
+        function typeCode(lines, index, colorIndex) {
+            if (index < lines.length) {
+                const line = lines[index];
+                const coloredLine = `<span style="color: ${colors[colorIndex % colors.length]}">${line}</span>\n`;
+                outputElement.innerHTML += coloredLine;
+
+                colorIndex++;
+                setTimeout(() => typeCode(lines, index + 1, colorIndex), 1000);
+            } else {
+                setTimeout(() => {
+                    happyMessageElement.innerHTML = "Happy Valentine's, Emily!";
+                    heartMessageElement.innerHTML = "❤️";
+                }, 1000);
+            }
+        }
+
+        typeCode(codeLines, 0, 0);
+    </script>
+</body>
+
+</html> } } typeCode(codeLines, 0, 0);
+</script>
+</body>
+
+</html>
+typeCode(codeLines, 0, 0);
+</script>
+</body>
+
+</html>
